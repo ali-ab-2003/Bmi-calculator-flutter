@@ -17,6 +17,9 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         title: Text(
           'BMI CALCULATOR',
           style: TextStyle(color: Colors.white),
@@ -48,9 +51,7 @@ class ResultsPage extends StatelessWidget {
                   Text(
                     resultText.toUpperCase(),
                     style: TextStyle(
-                        color: Color(
-                          0xFF24D876,
-                        ),
+                        color: Color(0xFF24D876),
                         fontWeight: FontWeight.bold,
                         fontSize: 22.0),
                   ),
@@ -59,11 +60,15 @@ class ResultsPage extends StatelessWidget {
                     style:
                         TextStyle(fontSize: 100.0, fontWeight: FontWeight.bold),
                   ),
-                  Text(
-                    interpretation.toUpperCase(),
-                    style: TextStyle(fontSize: 22.0),
-                    textAlign: TextAlign.center,
-                  )
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10.0), // Add padding here
+                    child: Text(
+                      interpretation.toUpperCase(),
+                      style: TextStyle(fontSize: 22.0),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 ],
               ),
               onPress: () {},
